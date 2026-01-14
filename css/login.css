@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: Georgia, serif;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("../images/us.jpg") center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.login-box {
+  background: rgba(0,0,0,0.35);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 320px;
+  backdrop-filter: blur(8px);
+}

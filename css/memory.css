@@ -1,0 +1,26 @@
+.memory {
+  position: absolute;
+  width: 120px;
+  height: 160px;
+
+  object-fit: cover;
+  border-radius: 8px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+  opacity: 0;
+  animation: memoryFloat 6s ease-in-out forwards;
+}
+
+@keyframes memoryFloat {
+  0% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(0.95);
+  }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) scale(1);
+  }
+}

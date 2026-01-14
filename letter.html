@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letter</title>
+  <link rel="stylesheet" href="css/letter.css">
+</head>
+<body class="letter-page">
+
+  <!-- MEMORY BACKDROP -->
+  <div class="memory-backdrop">
+    <img id="memoryImage" src="" alt="memory">
+  </div>
+
+  <!-- CENTER CONTENT -->
+  <div class="letter-wrapper">
+
+    <div class="envelope" id="envelope" onclick="openLetter()">
+      <span>Click to open</span>
+    </div>
+
+   <h1>To my Babu,</h1>
+
+<p>
+I don’t even know where to begin, because there are so many things I’ve carried in my heart
+for so long and never found the right moment to say. Maybe this is that moment.
+Maybe this is my way of sitting beside you, even when I can’t actually be there.
+</p>
+
+<p>
+I am so incredibly proud of the person you are becoming my grown-up boy.
+Sometimes I still see the little child you once were, running around without a care,
+and sometimes I see the young man you’re slowly turning into, stronger and more thoughtful
+than you probably realise. Watching you grow from afar hasn’t been easy, and I wish more
+than anything that I could have been there for every single step.
+</p>
+
+<p>
+There are days when I miss you so much it feels physical.
+I miss the stupid arguments we used to have over the smallest things,
+the laughter that would follow, and the comfort of knowing you were just there.
+I miss how you could understand me without me saying anything,
+how your presence alone could make things feel lighter.
+</p>
+
+<p>
+Being away from you has taught me how precious those ordinary moments were.
+The days that felt simple back then are the ones I hold onto the most now.
+Every memory, every laugh, every fight they all live with me,
+no matter how far apart we are.
+</p>
+
+<p>
+I want you to know something very clearly:
+you mean the world to me.
+You always have, and you always will.
+You are not just my brother you are my safe place,
+my strength, and a part of me that distance can never take away.
+</p>
+
+<p>
+I know growing up isn’t easy.
+There will be moments when you feel lost, moments when you doubt yourself,
+and moments when you feel like the world is asking too much from you.
+When those moments come, I want you to remember this 
+you are stronger than you think, kinder than you realise,
+and capable of so much more than you give yourself credit for.
+</p>
+
+<p>
+I’m sorry I couldn’t be there to see you grow every day.
+I’m sorry I missed things I wish I had been part of.
+But I promise you this:
+I will always be here for you in every way I can be.
+I promise to support you, to stand by you,
+and to give you everything you deserve.
+</p>
+
+<p>
+You deserve the world, my little baby,
+and even if I can’t hand it to you all at once,
+I will spend my life trying to bring it to you piece by piece.
+</p>
+
+<p>
+Thank you for being you.
+Thank you for being understanding, patient, and loving in ways you may not even notice.
+Thank you for being my brother.
+</p>
+
+<p>
+No matter where life takes us,
+no matter how many miles stand between us,
+you will always have me 
+cheering for you, believing in you,
+and loving you more than words can ever fully explain.
+</p>
+
+<p>
+Always.
+</p>
+
+  </div>
+
+  <script src="js/memories.js"></script>
+</body>
+
+  <script>
+    function openLetter() {
+      document.getElementById("envelope").style.display = "none";
+      document.getElementById("letter").classList.remove("hidden");
+    }
+  </script>
+  <script>
+    const images = [
+      "images/memories/IMG_1397.jpeg",
+      "images/memories/IMG_2006.jpeg",
+      "images/memories/IMG_2161.jpeg",
+      "images/memories/IMG_2563.jpeg",
+      "images/memories/IMG_2665.jpeg",
+      "images/memories/IMG_2930.jpeg",
+      "images/memories/IMG_4342.jpeg",
+      "images/memories/IMG_5876.jpeg",
+      "images/memories/IMG_7145.jpeg",
+      "images/memories/IMG_9328.jpeg"
+    ];
+
+    const container = document.getElementById("memories");
+
+    function spawnMemory() {
+      const img = document.createElement("img");
+      img.src = images[Math.floor(Math.random() * images.length)];
+      img.className = "memory";
+
+      const x = Math.random() > 0.5 ? "-220px" : "220px";
+      const y = `${Math.random() * 200 - 100}px`;
+
+      img.style.setProperty("--x", x);
+      img.style.setProperty("--y", y);
+
+      container.appendChild(img);
+      setTimeout(() => img.remove(), 6000);
+    }
+
+    setInterval(spawnMemory, 1200);
+  </script>
+
+</body>
+</html>
+
+
